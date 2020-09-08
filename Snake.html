@@ -4,5 +4,20 @@
     </head>
 <body>
 <canvas id="gameCanvas"width="300" height="300"></canvas>
+<script>
+//contantes do game
+const canvasBorderColour= "black";
+const canvasBkpgrdColour= "white";
+//atribui o elemento do canvas a uma variavel do javascript e define o contexto
+var gameCanvas = document.getElementById("gameCanvas");
+var ctx= gameCanvas.getContext("2d");
+//define as cores sobre o canvas com as constantes a cima definidas;
+ctx.fillStyle=canvasBkpgrdColour;
+ctx.strokeStyle=canvasBorderColour;
+// desenha primeiramente o fundo na cor definida e após isto desenha a borda
+ctx.fillRect(0,0,gameCanvas.width, gameCanvas.height);
+ctx.strokeRect(0,0,gameCanvas.width, gameCanvas.height);
+</script>    
+
 </body>
 </html>
