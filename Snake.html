@@ -8,6 +8,10 @@
 //contantes do game
 const canvasBorderColour= "black";
 const canvasBkpgrdColour= "white";
+const snakeColour = "grey";
+const snakeBorderColour = "black";
+
+
 //atribui o elemento do canvas a uma variavel do javascript e define o contexto
 var gameCanvas = document.getElementById("gameCanvas");
 var ctx= gameCanvas.getContext("2d");
@@ -30,6 +34,12 @@ function drawSnakePart(snakePart){
 function drawSnake(){
     snake.forEach(drawSnakePart);
 }
+
+
+//o script abaixo habilita as funções de movimento da cobra do game
+
+
+
 
 
 </script>    
