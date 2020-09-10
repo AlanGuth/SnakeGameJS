@@ -76,8 +76,24 @@ const goUp = dy === -10;
 const goDown = dy === 10;
 const goR = dx === 10;
 const goL = dx === -10;
+// comportamento ao capturar evento da chave selecionada (botão)
 
-
+if(keyPressed === lKey && !goR){
+dx = -10;
+dy = 0;
+}
+if(keyPressed === rKey && !goL){
+dx = 10;
+dy = 0;
+}
+if(keyPressed === dKey && !goUp){
+dx = 0;
+dy = 10
+}
+if(keyPressed === uKey && !goDown){
+dx= 0;
+dy = -10;    
+}
 
 }
 
