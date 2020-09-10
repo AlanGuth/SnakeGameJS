@@ -38,10 +38,15 @@ advanceSnake();
 
 dx = 0;
 dy = 10;
-
+advanceSnake();
+drawSnake();
 
 function advanceSnake(){
         const head={x: snake[0].x+dx, y: snake[0].y+dy};
+}
+
+function drawSnake(){
+    snake.foreach(drawSnakePart);
 }
 
 //o  script abaixo adiciona a cobra ao canvas do game
