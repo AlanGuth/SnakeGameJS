@@ -124,6 +124,19 @@ function drawFood(){
 }
 
 
+//metodo main do jogo
+
+function main(){
+    setTimeout(function onTick(){
+        clearCanvas();
+        drawFood();
+        advanceSnake();
+        drawSnake();
+        main();
+    },100)
+}
+
+
 </script>    
 
 </body>
