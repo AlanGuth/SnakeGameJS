@@ -142,6 +142,11 @@ function creatFood(){
 
 }
 
+function drawSnake(){
+    snake.foreach(drawSnakePart);
+}
+
+
 // até aqui o codigo foi corrigido
 
 
@@ -152,9 +157,6 @@ advanceSnake();
 drawSnake();
 
 
-function drawSnake(){
-    snake.foreach(drawSnakePart);
-}
 
 //o  script abaixo adiciona a cobra ao canvas do game
 function drawSnakePart(snakePart){
