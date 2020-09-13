@@ -128,6 +128,19 @@ function randomCoordinates(min,max){
 
 }
 
+// função onde a comida será criada
+function creatFood(){
+    foodX = randomCoordinates(0,gameCanvas.width - 10);
+    foodY = randomCoordinates(0,gameCanvas.height - 10)
+    snake.forEach(function isFoodOnSnake(part){
+        const foodOnSnake = part.x == foodX 
+        && part.y == foodY
+        if(foodOnSnake){
+            creatFood;
+        } 
+    });
+
+}
 
 // até aqui o codigo foi corrigido
 
@@ -191,19 +204,6 @@ dy = -10;
 
 }
 
-// função onde a comida será criada
-function creatFood(){
-    foodX = randomCoordinates(0,gameCanvas.width - 10);
-    foodY = randomCoordinates(0,gameCanvas.height - 10)
-    snake.forEach(function isFoodOnSnake(part){
-        const foodOnSnake = part.x == foodX 
-        && part.y == foodY
-        if(foodOnSnake){
-            creatFood;
-        } 
-    });
-
-}
 
 
 
