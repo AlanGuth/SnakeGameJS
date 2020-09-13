@@ -75,6 +75,20 @@ creatFood();
 um metodo, neste caso aqui ele irá chamar o metodo que mexe a cobra dependendo de qualquer chave pressionada*/ 
 document.addEventListener("keydown",changeDirection());
 
+
+//metodo main do jogo
+
+function main(){
+    setTimeout(function onTick(){
+        clearCanvas();
+        drawFood();
+        advanceSnake();
+        drawSnake();
+        main();
+    },100)
+}
+
+
 // até aqui o codigo foi corrigido
 
 
@@ -176,18 +190,6 @@ function drawFood(){
     ctx.strokeRect(foodX,foodY,10,10);
 }
 
-
-//metodo main do jogo
-
-function main(){
-    setTimeout(function onTick(){
-        clearCanvas();
-        drawFood();
-        advanceSnake();
-        drawSnake();
-        main();
-    },100)
-}
 
 
 
