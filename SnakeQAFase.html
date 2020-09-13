@@ -13,8 +13,22 @@
     pode atraves do id ser acessada pelo css ou pelo javascript
     em geral a tag div aplica um break, pulando uma linha após sua disposição-->
 <div id="score">0</div>
-<!-------------Correction line------------------------------------------>
 <canvas id="gameCanvas"width="300" height="300"></canvas>
+<!--a tag style é utilizado para definir parametros de estilo do html, por exemplo,
+     vc pode pegar elementos pelo id ou pode definir de todos os elementos, pode definir 
+     que todos os elementos com h1 tenham a cor verde em seu conteudo-->
+<style>
+#gameCanvas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+</style>
+
+<!-------------Correction line------------------------------------------>
 <script>
 //contantes do game
 const canvasBorderColour= "black";
