@@ -89,12 +89,22 @@ function main(){
 }
 
 
+function clearCanvas() {
+      //  Select the colour to fill the drawing
+      ctx.fillStyle = canvasBkpgrdColour;
+      //  Select the colour for the border of the canvas
+      ctx.strokestyle = canvasBorderColour;
+
+      // Draw a "filled" rectangle to cover the entire canvas
+      ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+      // Draw a "border" around the entire canvas
+      ctx.strokeRect(0, 0, gameCanvas.width, gameCanvas.height);
+    }
+
+
 // até aqui o codigo foi corrigido
 
 
-
-
-advanceSnake();
 
 dx = 0;
 dy = 10;
