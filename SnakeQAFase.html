@@ -54,7 +54,7 @@ let dx= 10;
 //velocidade vertical
 let dy=0;
 
-// até aqui o codigo foi corrigido
+
 
 
 
@@ -67,6 +67,18 @@ ctx.strokeStyle=canvasBorderColour;
 // desenha primeiramente o fundo na cor definida e após isto desenha a borda
 ctx.fillRect(0,0,gameCanvas.width, gameCanvas.height);
 ctx.strokeRect(0,0,gameCanvas.width, gameCanvas.height);
+
+//gatilhos para primeiras ações do jogo
+main();
+creatFood();
+/** o metodo addEventListener do javascript serve como função que através de um evento irá chamar 
+um metodo, neste caso aqui ele irá chamar o metodo que mexe a cobra dependendo de qualquer chave pressionada*/ 
+document.addEventListener("keydown",changeDirection());
+
+// até aqui o codigo foi corrigido
+
+
+
 
 advanceSnake();
 
