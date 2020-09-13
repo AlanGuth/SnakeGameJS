@@ -101,6 +101,14 @@ function clearCanvas() {
       ctx.strokeRect(0, 0, gameCanvas.width, gameCanvas.height);
     }
 
+    function drawFood(){
+    ctx.fillStyle = "red";
+    ctx.strokeStyle = "darkred";
+    ctx.fillRect(foodX,foodY,10,10);
+    ctx.strokeRect(foodX,foodY,10,10);
+}
+
+
 
 // até aqui o codigo foi corrigido
 
@@ -193,12 +201,6 @@ function creatFood(){
 }
 
 // metodo para desenhar a comida no canvas
-function drawFood(){
-    ctx.fillStyle = "red";
-    ctx.strokeStyle = "darkred";
-    ctx.fillRect(foodX,foodY,10,10);
-    ctx.strokeRect(foodX,foodY,10,10);
-}
 
 
 
