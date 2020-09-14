@@ -155,24 +155,6 @@ function drawSnakePart(snakePart){
 
 }
 
-// até aqui o codigo foi corrigido
-
-
-
-dx = 0;
-dy = 10;
-advanceSnake();
-drawSnake();
-
-
-
-
-
-function drawSnake(){
-    snake.forEach(drawSnakePart);
-}
-
-
 //o script abaixo habilita as funções de movimento da cobra do game através das setas
 
 function changeDirection(event){
@@ -181,7 +163,11 @@ const lKey = 37;
 const rKey = 39;
 const uKey = 38;
 const dKey = 40;
+
+
 const keyPressed = event.keyCode;
+
+
 const goUp = dy === -10;
 const goDown = dy === 10;
 const goR = dx === 10;
@@ -208,10 +194,7 @@ dy = -10;
 }
 
 
-
-
-
-
+// até aqui o codigo foi corrigido
 
 
 
