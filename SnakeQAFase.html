@@ -73,7 +73,7 @@ main();
 creatFood();
 /** o metodo addEventListener do javascript serve como função que através de um evento irá chamar 
 um metodo, neste caso aqui ele irá chamar o metodo que mexe a cobra dependendo de qualquer chave pressionada*/ 
-document.addEventListener("keydown",changeDirection());
+document.addEventListener("keydown",changeDirection);
 
 
 //metodo main do jogo
@@ -156,47 +156,39 @@ function drawSnakePart(snakePart){
 }
 
 //o script abaixo habilita as funções de movimento da cobra do game através das setas
-
+/* @param { object } event - The keydown event*/
 function changeDirection(event){
     // definido comportamento das direções e 'chaves ' dos botões apertados
-const lKey = 37;
-const rKey = 39;
-const uKey = 38;
-const dKey = 40;
+      const LEFT_KEY = 37;
+      const RIGHT_KEY = 39;
+      const UP_KEY = 38;
+      const DOWN_KEY = 40;
+      const keyPressed = event.keyCode;
 
-
-const keyPressed = event.keyCode;
-
-
-const goUp = dy === -10;
-const goDown = dy === 10;
-const goR = dx === 10;
-const goL = dx === -10;
+      const goingUp = dy === -10;
+      const goingDown = dy === 10;
+      const goingRight = dx === 10;
+      const goingLeft = dx === -10;
 // comportamento ao capturar evento da chave selecionada (botão)
+if (keyPressed === LEFT_KEY && !goingRight) {
+        dx = -10;
+        dy = 0;
+      }
+      if (keyPressed === UP_KEY && !goingDown) {
+        dx = 0;
+        dy = -10;
+      }
+      if (keyPressed === RIGHT_KEY && !goingLeft) {
+        dx = 10;
+        dy = 0;
+      }
+      if (keyPressed === DOWN_KEY && !goingUp) {
+        dx = 0;
+        dy = 10;
+      }
 
-if(keyPressed === lKey && !goR){
-dx = -10;
-dy = 0;
 }
-if(keyPressed === rKey && !goL){
-dx = 10;
-dy = 0;
-}
-if(keyPressed === dKey && !goUp){
-dx = 0;
-dy = 10
-}
-if(keyPressed === uKey && !goDown){
-dx= 0;
-dy = -10;    
-}
-
-}
-
-
 // até aqui o codigo foi corrigido
-
-
 
 </script>    
 
